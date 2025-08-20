@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Hasnain</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script> <!-- Replace with your kit -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: inherit; margin:0; }
+
+    /* Scroll Animations */
+    .fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .slide-up { opacity: 0; transform: translateY(50px); transition: all 0.8s ease-out; }
+    .slide-up.visible { opacity: 1; transform: translateY(0); }
+
+    .bounce-in { opacity: 0; transform: scale(0.8); transition: all 0.8s cubic-bezier(.17,.67,.83,.67); }
+    .bounce-in.visible { opacity: 1; transform: scale(1); }
+
+    .slide-left { opacity: 0; transform: translateX(-50px); transition: all 0.8s ease-out; }
+    .slide-left.visible { opacity: 1; transform: translateX(0); }
+
+    .slide-right { opacity: 0; transform: translateX(50px); transition: all 0.8s ease-out; }
+    .slide-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* Floating shapes */
+    .floating-shape { position: absolute; border-radius: 50%; opacity:0.15; animation: float 6s ease-in-out infinite alternate; }
+    @keyframes float { 0%,100%{transform:translateY(0);}50%{transform:translateY(-25px);} }
+
+    /* Stat numbers */
+    .stat-number { font-size: 3rem; font-weight: 700; }
+  </style>
+</head>
+<body class="text-gray-900">
+       
+    <header class="sticky top-0 py-2 md:py-4 px-4 bg-[#251893] shadow-lg z-50">
+  <div class="container mx-auto flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="logo max-w-[35px]">
+      <img src="./images/main-favicon.png" alt="">
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-x-16 text-white">
+        <li>
+          <a href="https://hasnain-ahmed.netlify.app" class="relative group">
+            Home
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="relative group">
+            Services
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="relative group">
+            Portfolio
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="relative group">
+            Testimonials
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Desktop Contact Button -->
+    <div class="hidden md:block">
+      <a href="#" class="bg-white text-[#251893] rounded-full px-6 py-2 font-semibold hover:bg-yellow-400 hover:text-white transition">Contact Us</a>
+    </div>
+
+    <!-- Mobile Menu Icon -->
+    <div id="responsive-menu" class="menu block md:hidden text-white text-3xl cursor-pointer">
+      <ion-icon name="menu-outline"></ion-icon>
+    </div>
+
+  </div>
+
+  <!-- Mobile Menu Panel -->
+  <nav id="responsive-panel" class="fixed top-[56px] left-0 right-0 bg-[#251893] overflow-hidden max-h-0 md:hidden">
+    <ul id="mobile-menu-items" class="flex flex-col items-center gap-y-8 text-white py-6">
+      <li class="opacity-0 translate-y-4"><a href="#" class="hover:text-yellow-400 transition">About</a></li>
+      <li class="opacity-0 translate-y-4"><a href="#" class="hover:text-yellow-400 transition">Services</a></li>
+      <li class="opacity-0 translate-y-4"><a href="#" class="hover:text-yellow-400 transition">Portfolio</a></li>
+      <li class="opacity-0 translate-y-4"><a href="#" class="hover:text-yellow-400 transition">Testimonials</a></li>
+      <li class="opacity-0 translate-y-4">
+        <a href="#" class="bg-white text-[#251893] rounded-full px-6 py-2 font-semibold hover:bg-yellow-400 hover:text-white transition">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Hero Section -->
+  <section class="relative w-full py-28 bg-[#D9FC60] text-center overflow-hidden">
+      <div class="absolute top-10 left-10 w-32 h-32 bg-[#251893] floating-shape"></div>
+      <div class="absolute bottom-10 right-10 w-40 h-40 bg-[#251893] floating-shape"></div>
+
+      <h1 class="text-5xl font-bold fade-in mb-4">Hey! I'm Hasnain 👋</h1>
+      <p class="text-lg fade-in max-w-2xl mx-auto">
+        I'm a 12-year-old curious mind studying at City School. I love exploring technology, building websites, gaming, watching F1 races, football (CR7 is my favorite), and cricket. Welcome to my little digital space!
+      </p>
+    
+    
+
+  </section>
+
+  <!-- Story Section -->
+<section id="about" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+    
+    <!-- About Image -->
+   <div class="flex justify-center">
+  <img 
+    src="./images/hasnain-image.jpg" 
+    alt="About Me" 
+    class="w-full max-w-[220px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[380px] rounded-2xl shadow-lg"
+  >
+</div>
+    <!-- About Content -->
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#251893] mb-4">About Me</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        Hi! My name is <span class="font-semibold text-[#251893]">Hasnain</span>.  
+        I am a passionate <span class="font-semibold">Front-End Web Developer</span> who loves creating 
+        clean, responsive, and interactive websites.  
+        I have strong knowledge of <span class="font-semibold">HTML, CSS, JavaScript</span> and 
+        I also enjoy experimenting with modern web tools and animations to bring ideas to life.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        I have built multiple projects including portfolio websites, landing page clones, and 
+        interactive web pages. My goal is to become a skilled 
+        <span class="font-semibold">MERN Stack Developer</span> in the future.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        Apart from coding, I enjoy <span class="font-semibold">designing UI/UX, traveling, and exploring new technologies</span>.  
+        I believe in continuous learning and improving my skills to stay up-to-date in the tech world.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Hobbies Section -->
+
+<section class="py-24 w-full bg-[#D9FC60]">
+  <h2 class="text-4xl font-bold text-center mb-12 fade-in">Hobbies & Interests</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
+      <div class="bg-[#251893] text-white p-8 rounded-xl bounce-in hover:scale-105 hover:shadow-2xl flex flex-col items-center">
+          <i class="fas fa-gamepad text-4xl mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">Gaming</h3>
+          <p class="text-center">I enjoy adventurous and strategy games that challenge my mind and reflexes.</p>
+      </div>
+      <div class="bg-[#251893] text-white p-8 rounded-xl bounce-in hover:scale-105 hover:shadow-2xl flex flex-col items-center">
+          <i class="fas fa-laptop-code text-4xl mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">Tech Explorer</h3>
+          <p class="text-center">I love discovering new technologies and building things on the web.</p>
+      </div>
+      <div class="bg-[#251893] text-white p-8 rounded-xl bounce-in hover:scale-105 hover:shadow-2xl flex flex-col items-center">
+          <i class="fas fa-car-side text-4xl mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">F1 Racing</h3>
+          <p class="text-center">Watching F1 races teaches me speed, strategy, and thrill!</p>
+      </div>
+      <div class="bg-[#251893] text-white p-8 rounded-xl bounce-in hover:scale-105 hover:shadow-2xl flex flex-col items-center">
+          <i class="fas fa-futbol text-4xl mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">Football</h3>
+          <p class="text-center">CR7 inspires me — I love football for its skill, teamwork, and excitement.</p>
+      </div>
+      <div class="bg-[#251893] text-white p-8 rounded-xl bounce-in hover:scale-105 hover:shadow-2xl flex flex-col items-center">
+          <i class="fas fa-cricket text-4xl mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">Cricket</h3>
+          <p class="text-center">Playing cricket with friends keeps me active and competitive.</p>
+      </div>
+      <!-- New Traveling Card -->
+      <div class="bg-[#251893] text-white p-8 rounded-xl bounce-in hover:scale-105 hover:shadow-2xl flex flex-col items-center">
+          <i class="fas fa-plane text-4xl mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">Traveling</h3>
+          <p class="text-center">Traveling to new places opens my mind and gives me fresh experiences!</p>
+      </div>
+  </div>
+</section>
+
+
+  <!-- Achievements Section -->
+  
+  <!-- Projects Section -->
+  <section class="py-24 w-full bg-[#D9FC60]">
+      <h2 class="text-4xl font-bold text-center mb-12 fade-in">Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
+          <div class="bg-[#251893] text-white p-8 rounded-xl slide-left hover:scale-105 hover:shadow-2xl text-center">
+              <img src="./images/lazarevhome-netlify-app-img.png" alt="Project 1" class="mx-auto mb-4 w-32 h-32 object-cover rounded-lg">
+              <a href="https://lazarevhome.netlify.app" target="_blank" class="font-semibold text-lg hover:underline">LazarevHome</a>
+              <p class="mt-2 text-sm">A clean, interactive landing page project I built to practice layouts & animations.</p>
+          </div>
+          <div class="bg-[#251893] text-white p-8 rounded-xl slide-right hover:scale-105 hover:shadow-2xl text-center">
+              <img src="./images/helpgoabstract-netlify-app-img.png" alt="Project 2" class="mx-auto mb-4 w-32 h-32 object-cover rounded-lg">
+              <a href="https://helpgoabstract.netlify.app" target="_blank" class="font-semibold text-lg hover:underline">HelpGoAbstract</a>
+              <p class="mt-2 text-sm">A small service website I developed, improving my grid & responsive skills.</p>
+          </div>
+          <div class="bg-[#251893] text-white p-8 rounded-xl slide-left hover:scale-105 hover:shadow-2xl text-center">
+              <img src="./images/thebasicmagazine-netlify-app-img.png" alt="Project 3" class="mx-auto mb-4 w-32 h-32 object-cover rounded-lg">
+              <a href="https://thebasicmagazine.netlify.app" target="_blank" class="font-semibold text-lg hover:underline">TheBasicMagazine</a>
+              <p class="mt-2 text-sm">A magazine-style web page project to practice typography & layout grids.</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1A1A1A] text-white py-12">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+    <!-- About -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4">About Us</h3>
+      <p class="text-gray-400 text-sm">
+        We provide top-notch web development services with clean design and smooth user experience.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+      <ul class="space-y-1 text-gray-400 text-sm">
+        <li><a href="#" class="hover:text-yellow-400 transition">Home</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Services</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Portfolio</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Services</h3>
+      <ul class="space-y-1 text-gray-400 text-sm">
+        <li><a href="#" class="hover:text-yellow-400 transition">Web Design</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Frontend Development</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">UI/UX Design</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">SEO Optimization</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Newsletter</h3>
+      <p class="text-gray-400 text-sm mb-3">Subscribe to our newsletter for updates.</p>
+      <div class="flex items-center">
+        <input type="email" placeholder="Enter your email"
+          class="px-3 py-2 w-40 md:w-48 rounded-l-md text-black text-sm focus:outline-none">
+        <button class="bg-yellow-400 text-black px-3 py-2 rounded-r-md text-sm font-medium hover:bg-yellow-300 transition">Go</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="pt-6 text-center text-gray-500 text-sm space-y-1">
+    <p>© 2025 CodeNest. Made with ❤️ and crafted with passion by <span class="font-semibold text-yellow-400">Hasnain Ahmed</span>.</p>
+    <p>Don't forget to follow me on <a href="https://github.com/HasnainCR7" target="_blank" class="text-yellow-400 hover:underline">GitHub</a>!</p>
+  </div>
+</footer>
+      
+  <!-- Scripts for scroll reveal & stats -->
+  <script>
+      // Scroll Reveal
+      const elements = document.querySelectorAll('.slide-up, .bounce-in, .slide-left, .slide-right, .fade-in');
+      function revealOnScroll() {
+          const windowHeight = window.innerHeight;
+          elements.forEach(el => {
+              const top = el.getBoundingClientRect().top;
+              if(top < windowHeight - 100){
+                  el.classList.add('visible');
+              }
+          });
+      }
+      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener('load', revealOnScroll);
+
+      // Stats Counter
+      const counters = document.querySelectorAll('.stat-number');
+      counters.forEach(counter => {
+          const updateCount = () => {
+              const target = +counter.getAttribute('data-target');
+              const count = +counter.innerText;
+              const increment = target / 100;
+
+              if(count < target) {
+                  counter.innerText = Math.ceil(count + increment);
+                  setTimeout(updateCount, 20);
+              } else {
+                  counter.innerText = target;
+              }
+          };
+          updateCount();
+      });
+  </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
